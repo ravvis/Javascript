@@ -4,17 +4,21 @@
     <title>
       Practice
     </title>
-    <script type="module" src="./index.js"></script>
-    <link rel="stylesheet" href="./index.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script type="module" src="index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div>
-      <h1>
-        Hello World
-      </h1>
-    </div>
-    <div id="user-info">
-      
+    <div class="b-app">
+      <div class="b-app__heading">
+        <h1>
+          Hello World
+        </h1>
+      </div>
+      <div id="user-info">
+        
+      </div>
     </div>
   </body>
 </html>
