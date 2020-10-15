@@ -1,24 +1,8 @@
 import './resources/storage.js'
+// import api from './resources/api.js'
 
-import api from './resources/api.js'
-let token = document.head.querySelector('meta[name="csrf-token"]');
+/************* Array methods *************/
 
-if (token) {
-    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
+let test_array = [1, 2, 3, 4, 5]
 
-console.log(api.getMethod)
-
-api.getMethod('https://indian-cities-api-nocbegfhqg.now.sh/cities', {
-  headers : {
-    'Access-Control-Allow-Origin' : '*'
-  }
-})
-.then((response) => {
-  console.log(response)
-})
-.catch((error) => {
-  console.log(error)
-}) 
+import './resources/array-functions.js'
